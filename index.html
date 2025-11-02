@@ -3,111 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario Caso de Uso</title>
+  <title>Proyecto Ético - Ilsser Guatemala Mendieta</title>
   <style>
     body {
-      font-family: 'Times New Roman', Times, serif;
-      margin: 20px;
-      padding: 20px;
+      font-family: "Poppins", sans-serif;
+      background: #f4f9f8;
+      margin: 0;
+      color: #222;
+      scroll-behavior: smooth;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #000;
-      border-radius: 10px;
-      background-color: #f9f9f9;
-    }
-    h1 {
+
+    header {
+      background: linear-gradient(135deg, #009879, #007a63);
+      color: white;
       text-align: center;
+      padding: 60px 20px;
     }
-    table {
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    nav {
+      background: #004d40;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #009688;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #00695c;
+      border-bottom: 3px solid #00a86b;
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      color: #009688;
+      margin-top: 30px;
+    }
+
+    .accordion {
+      background: #f1fef5;
+      color: #004d40;
+      cursor: pointer;
+      padding: 15px 20px;
       width: 100%;
-      border-collapse: collapse;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      border-left: 5px solid #00a86b;
+      margin-top: 8px;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .accordion:hover {
+      background: #e3f7ef;
+      transform: scale(1.02);
+    }
+
+    .active, .accordion:active {
+      background: #d8f5e7;
+    }
+
+    .panel {
+      padding: 0 20px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      border-left: 3px solid #00a86b;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .panel p {
+      margin: 15px 0;
+      color: #333;
+    }
+
+    .frase-final {
+      background: #00a86b;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      font-style: italic;
+      text-align: center;
       margin-top: 20px;
     }
-    th, td {
-      border: 1px solid black;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      width: 25%;
-    }
-    .editable {
-      background-color: #ffffff33;
-    }
-    .print-button {
-      display: block;
-      width: 200px;
-      margin: 20px auto;
-      padding: 10px;
+
+    footer {
+      background: #004d40;
+      color: white;
       text-align: center;
-      background-color: #cefc00;
-      color: #000;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .print-button:hover {
-      background-color: #0056b3;
-      color: #fff;
-    }
-    @media print {
-      .print-button {
-        display: none;
-      }
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 3px solid #00a86b;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Caso de Uso</h1>
 
-    <table>
-      <tr><th>ID Único</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Nombre del Caso</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Área</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Actor</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Interesado</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Nivel</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Descripción</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Evento Desencadenador</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Tipo de Desencadenador</th><td contenteditable="true" class="editable"></td></tr>
-    </table>
+  <header>
+    <h1>Proyecto Ético</h1>
+    <p>"Vivir con propósito, actuar con integridad y crecer con sabiduría"</p>
+    <p><strong>Ilsser Francisco Guatemala Mendieta</strong></p>
+  </header>
 
-    <table>
-      <tr><th>Pasos realizados</th><th>Información para los Pasos</th></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-      <tr><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
-    </table>
+  <nav>
+    <a href="#introduccion">Introducción</a>
+    <a href="#principios">Principios</a>
+    <a href="#votos">7 Votos</a>
+    <a href="#reflexiones">Reflexiones</a>
+    <a href="#discurso">Discurso Final</a>
+  </nav>
 
-    <table>
-      <tr><th>Precondiciones</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Poscondiciones</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Suposiciones</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Garantía de Uso</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Garantía Mínima</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Requerimientos Cumplidos</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Cuestiones Pendientes</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Prioridad</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Riesgo</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Reglas del Negocio</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Excepciones</th><td contenteditable="true" class="editable"></td></tr>
-      <tr><th>Comentarios</th><td contenteditable="true" class="editable"></td></tr>
-    </table>
+  <!-- INTRODUCCIÓN -->
+  <section id="introduccion">
+    <h2>Introducción</h2>
+    <p>
+      Este blog es un viaje personal hacia la ética vivida. Cada principio y voto
+      representa un paso en el desarrollo de mi carácter y mis valores. A través de este
+      proyecto busco alinear mis acciones con los ideales de justicia, humildad, amor y sabiduría.
+    </p>
+  </section>
 
-    <button class="print-button" onclick="window.print()">Imprimir / Guardar como PDF</button>
-  </div>
+  <!-- PRINCIPIOS -->
+  <section id="principios">
+    <h2>Principios para una Vida Plena</h2>
+    <h3>Comunicación</h3>
+
+    <button class="accordion">¿Qué aprendió al vivir esta práctica?</button>
+    <div class="panel"><p>Aprendí que comunicar no es solo hablar, sino comprender al otro con empatía.</p></div>
+
+    <button class="accordion">¿Qué emociones se presentaron?</button>
+    <div class="panel"><p>Sentí serenidad y conexión cuando me esforcé por escuchar con atención genuina.</p></div>
+
+    <button class="accordion">¿Hubo desafíos al aplicar el principio?</button>
+    <div class="panel"><p>Controlar la impulsividad y no reaccionar antes de entender fue el principal desafío.</p></div>
+
+    <button class="accordion">¿Cómo cambió su relación con los demás?</button>
+    <div class="panel"><p>Mejoraron notablemente mis relaciones al mostrar interés real en lo que los demás sienten.</p></div>
+
+    <button class="accordion">¿Qué efecto tuvo su acción en el entorno?</button>
+    <div class="panel"><p>Fomentó el respeto, la cooperación y la confianza en el entorno laboral y familiar.</p></div>
+
+    <button class="accordion">¿Alguien se vio positivamente influenciado?</button>
+    <div class="panel"><p>Sí, mi equipo de trabajo adoptó una comunicación más empática y abierta.</p></div>
+
+    <button class="accordion">¿Qué cambios éticos o actitudinales pudo observar?</button>
+    <div class="panel"><p>Desarrollé más empatía, autocontrol y apertura emocional.</p></div>
+
+    <button class="accordion">¿Qué mejoraría?</button>
+    <div class="panel"><p>Ser aún más paciente en conversaciones difíciles.</p></div>
+
+    <button class="accordion">¿Cómo puede fortalecer ese principio en su vida diaria?</button>
+    <div class="panel"><p>Escuchando sin interrupciones y expresando ideas con respeto.</p></div>
+
+    <button class="accordion">Frase de Compromiso Final</button>
+    <div class="panel"><p><em>"La comunicación sincera abre las puertas del entendimiento."</em></p></div>
+  </section>
+
+  <!-- 7 VOTOS -->
+  <section id="votos">
+    <h2>Los 7 Votos del Éxito</h2>
+    <h3>Voto: Honestidad</h3>
+
+    <button class="accordion">Propósito</button>
+    <div class="panel"><p>Vivir en coherencia con mis valores, siendo transparente y auténtico en todo momento.</p></div>
+
+    <button class="accordion">Ámbito Personal - ¿Qué valor quiere proteger?</button>
+    <div class="panel"><p>La verdad como base del respeto propio y la confianza ajena.</p></div>
+
+    <button class="accordion">Ámbito Personal - ¿Qué actitud desea reforzar?</button>
+    <div class="panel"><p>La sinceridad y la coherencia entre lo que pienso, digo y hago.</p></div>
+
+    <button class="accordion">Ámbito Familiar - ¿Qué valor quiere proteger?</button>
+    <div class="panel"><p>El respeto y la lealtad en cada relación familiar.</p></div>
+
+    <button class="accordion">Ámbito Laboral - ¿Qué valor quiere proteger?</button>
+    <div class="panel"><p>La confianza, el cumplimiento y la integridad profesional.</p></div>
+
+    <button class="accordion">Frase de Compromiso Final</button>
+    <div class="panel"><p><em>"La honestidad no se dice, se demuestra cada día."</em></p></div>
+  </section>
+
+  <!-- REFLEXIONES -->
+  <section id="reflexiones">
+    <h2>Reflexiones: La vida no es lo que te imaginas</h2>
+
+    <h3>Capítulo I: La Cosmovisión</h3>
+    <button class="accordion">¿Cuál es el contexto?</button>
+    <div class="panel"><p>Comprendí que mis valores son la brújula que define mi propósito en la vida.</p></div>
+
+    <button class="accordion">¿Influye en su forma de pensar?</button>
+    <div class="panel"><p>Sí, ahora reflexiono más antes de actuar, evaluando mis decisiones según mis principios.</p></div>
+
+    <button class="accordion">¿Provocó algún cambio en su estilo de vida?</button>
+    <div class="panel"><p>Me llevó a buscar coherencia diaria entre mis pensamientos y mis acciones.</p></div>
+
+    <h3>Capítulo VI: La Actitud</h3>
+    <button class="accordion">¿Cuál es el contexto?</button>
+    <div class="panel"><p>La actitud determina el resultado de mis esfuerzos más que las circunstancias externas.</p></div>
+
+    <button class="accordion">¿Influye en su forma de pensar?</button>
+    <div class="panel"><p>Sí, aprendí a ver cada obstáculo como una oportunidad de crecimiento.</p></div>
+
+    <button class="accordion">¿Provocó algún cambio en su estilo de vida?</button>
+    <div class="panel"><p>Adopté la gratitud como herramienta diaria de paz interior.</p></div>
+  </section>
+
+  <!-- DISCURSO FINAL -->
+  <section id="discurso">
+    <h2>Discurso Final</h2>
+    <p>
+      Este proyecto ético transformó mi manera de vivir. Aprendí que la ética no es un ideal abstracto,
+      sino un conjunto de decisiones diarias que construyen carácter. Los principios, los votos y las reflexiones
+      fueron pilares para fortalecer mi identidad y mi propósito de vida.
+    </p>
+    <div class="frase-final">
+      “Ser ético no es ser perfecto, es decidir cada día hacer lo correcto.”
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Proyecto Ético | Ilsser Francisco Guatemala Mendieta
+  </footer>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(btn => {
+      btn.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.style.padding = "0 20px";
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.style.padding = "15px 20px";
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
